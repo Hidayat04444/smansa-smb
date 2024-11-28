@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSIS SMA Negeri 1 Sembakung</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+        header {
+            background-color: #1e90ff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+        h2 {
+            color: #1e90ff;
+        }
+        .section {
+            margin-bottom: 30px;
+            padding: 15px;
+            background-color: #e6f7ff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background-color: #1e90ff;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .button-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            background-color: #1e90ff;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #187bcd;
+        }
+        a {
+            text-decoration: none;
+            color: #1e90ff;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .form-group {
+            margin: 10px 0;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>OSIS SMA Negeri 1 Sembakung</h1>
+        <p>Wadah Inspirasi dan Aspirasi Pelajar SMANSA</p>
+    </header>
+    <div class="container">
+        <div class="section">
+            <h2>Visi</h2>
+            <p>Mewujudkan siswa yang unggul, berkarakter, dan peduli lingkungan dalam suasana belajar yang harmonis.</p>
+        </div>
+        <div class="section">
+            <h2>Misi</h2>
+            <ol>
+                <li>Meningkatkan kegiatan religius, bakat, dan kreativitas siswa.</li>
+                <li>Membudayakan hidup bersih dan peduli lingkungan di sekolah.</li>
+                <li>Memfasilitasi penyampaian aspirasi siswa secara terbuka dan responsif.</li>
+                <li>Mengoptimalkan penggunaan media sosial untuk informasi kegiatan OSIS.</li>
+            </ol>
+        </div>
+        <div class="section">
+            <h2>Struktur OSIS</h2>
+            <p><b>Ketua:</b> Rizky Andra Maulidianysah</p>
+            <p><b>Wakil Ketua:</b> Satrio</p>
+            <p><b>Struktur Lain:</b> Sedang dibentuk</p>
+        </div>
+        <div class="section">
+            <h2>Kontak dan Media Sosial</h2>
+            <p><b>Instagram:</b> <a href="https://instagram.com/osissman1smb" target="_blank">@osissman1smb</a></p>
+            <p><b>WhatsApp:</b> <a href="https://wa.me/6285651029522" target="_blank">+62 856-5102-9522</a></p>
+        </div>
+        <div class="section">
+            <h2>Aspirasi Digital</h2>
+            <p>Sampaikan saran dan aspirasi Anda kepada OSIS SMANSA melalui formulir di bawah ini. Pesan Anda akan langsung terkirim ke WhatsApp kami.</p>
+            <form onsubmit="kirimPesan(event)">
+                <div class="form-group">
+                    <label for="aspirasi">Tulis Aspirasi Anda:</label>
+                    <textarea id="aspirasi" placeholder="Tulis saran atau aspirasi di sini..."></textarea>
+                </div>
+                <button type="submit">Kirim Aspirasi</button>
+            </form>
+        </div>
+        <div class="button-container">
+            <button onclick="location.href='https://instagram.com/osissman1smb'">Kunjungi Instagram</button>
+            <button onclick="location.href='https://wa.me/6285651029522'">Hubungi WhatsApp</button>
+        </div>
+    </div>
+    <footer>
+        &copy; 2024 OSIS SMANSA. All Rights Reserved.
+    </footer>
+    <script>
+        function kirimPesan(event) {
+            event.preventDefault();
+            const aspirasi = document.getElementById('aspirasi').value;
+            if (aspirasi.trim() === '') {
+                alert('Silakan tulis aspirasi Anda sebelum mengirim.');
+                return;
+            }
+            const nomorWA = '6285651029522';
+            const pesan = Halo OSIS SMANSA, saya ingin menyampaikan aspirasi:\n\n${aspirasi};
+            const url = https://wa.me/${nomorWA}?text=${encodeURIComponent(pesan)};
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>
